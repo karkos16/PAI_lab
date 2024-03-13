@@ -1,0 +1,35 @@
+li { list-style-type: square }
+
+#cena { 
+    color: red;
+    font-weight: bold; 
+}
+
+.wstęp {
+    font-style: italic;
+}
+
+td > img {
+    border: 1px solid blue;
+}
+
+td > img:hover {
+    border: 1px solid red;
+}
+
+h2 {
+    letter-spacing: 5px;
+}
+
+td[colspan="2"] > p {
+    font-size: small;
+}
+
+p ~ p {
+    color: gray;
+}
+
+body {
+    background-image: url(https://s.lubimyczytac.pl/upload/books/9000/9932/786887-170x243.jpg);
+     background-repeat: repeat-y
+}
