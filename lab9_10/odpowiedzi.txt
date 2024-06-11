@@ -1,0 +1,27 @@
+1. Do czego służą poszczególne warstwy architektury MVC i jak są połączone?
+  Model: Zarządza danymi i logiką biznesową.
+  View: Prezentuje dane użytkownikowi.
+  Controller: Obsługuje żądania użytkownika, zarządza modelem i widokiem.
+2. Jakie są konwencje nazewnictwa dla:
+  Modeli: Rzeczowniki w liczbie pojedynczej.
+  Kontrolerów: Kończą się na "Controller".
+  Akcji kontrolera: Czasowniki lub frazy opisujące akcje.
+  Widoków: Nazwane po akcji kontrolera.
+  Folderów widoków: Nazwane po kontrolerach (bez "Controller").
+3. Jak dane przekazywane są z kontrolerów do widoków (podaj 2 opcje)?
+  ViewData: Słownik.
+  ViewBag: Dynamiczny obiekt.
+4.Jak mapowane są URLs na akcje kontrolerów?
+  Routing: Definicje w plikach konfiguracyjnych
+
+  app.UseEndpoints(endpoints =>
+  {
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+  });
+
+5. Jak ograniczać akcje kontrolera tak, by były uruchamiane tylko z użyciem wskazanych typów zapytań HTTP (np. ograniczenie do HTTP POST)?
+  Atrybuty: [HttpPost], [HttpGet]
+6. Gdzie zdefiniowana jest walidacja danych i jak realizowana jest w widokach i kontrolerach?
+  Walidacja: Definiowana w modelach za pomocą atrybutów. Realizowana w kontrolerach przez sprawdzanie poprawności modelu, w widokach przez komunikaty błędów.
